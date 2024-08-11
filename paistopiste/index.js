@@ -19,13 +19,15 @@ const products = root.querySelectorAll('.ACampaignGrid__item[data-grid-data]').m
 });
 const currentDate = new Date().toISOString().split('T')[0]; 
 
+const outputDir = process.env.OUTPUT_DIR ?? './output';
+
 const raw = JSON.stringify(products.map((p) => p.raw), null, 2);
 const data = JSON.stringify(products.map(({ raw, ...data }) => data), null, 2);
-await Bun.write(`output/${currentDate}_raw.json`, raw);
-await Bun.write(`output/${currentDate}.json`, data);
-await Bun.write(`output/prices.json`, data);
+await Bun.write(`${outputDir}/${currentDate}_raw.json`, raw);
+await Bun.write(`${outputDir}/${currentDate}.json`, data);
+await Bun.write(`${outputDir}/prices.json`, data);
 
-const filename = 'output/paistopiste.csv';
+const filename = `${outputDir}/paistopiste.csv`;
 
 function updateCSV() {
   let csvData = [];

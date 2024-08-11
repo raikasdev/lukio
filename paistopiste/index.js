@@ -23,6 +23,7 @@ const raw = JSON.stringify(products.map((p) => p.raw), null, 2);
 const data = JSON.stringify(products.map(({ raw, ...data }) => data), null, 2);
 await Bun.write(`output/${currentDate}_raw.json`, raw);
 await Bun.write(`output/${currentDate}.json`, data);
+await Bun.write(`output/prices.json`, data);
 
 const filename = 'output/paistopiste.csv';
 

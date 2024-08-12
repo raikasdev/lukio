@@ -88,6 +88,12 @@ h1 {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .link-grid a {
   background-color: #005bbc;
   color: #fff;
@@ -142,6 +148,11 @@ h1 {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 768px) {
+  .menu-type-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .menu-type-grid.full {
@@ -245,6 +256,14 @@ footer {
   margin: 0 auto;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    border-radius: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 
 footer a {

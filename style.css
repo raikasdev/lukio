@@ -259,8 +259,8 @@ footer p:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-tr td:first-child,
-tr th:first-child {
+tr td,
+tr th {
   text-align: left;
 }
 

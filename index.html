@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Opiskelijan työpakki Jämsän lukioon</title>
+  <title>Opiskelijan työkalupakki Jämsän lukioon</title>
   <meta name="description" content="Koontisivu hyödyllisistä työkaluista Jämsän lukion opiskelijoille.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -151,6 +151,12 @@
           </div>
         </dialog>
         <dialog id="menu-dialog">
+          <div class="menu-type-grid buttons top">
+            <a href="https://fi.jamix.cloud/apps/menu/?anro=96665" class="food-menu-button secondary">Avaa ruokalista
+              Jamixissa</a>
+            <button class="food-menu-button" onclick="document.querySelector('#menu-dialog').close()">Sulje
+              ruokalista</button>
+          </div>
           <div class="menu-type-grid">
             <div class="menu-type">
               <h3>Ruokalista</h3>
@@ -164,12 +170,6 @@
                 Ladataan ruokalistaa...
               </div>
             </div>
-          </div>
-          <div class="menu-type-grid buttons">
-            <a href="https://fi.jamix.cloud/apps/menu/?anro=96665" class="food-menu-button secondary">Avaa ruokalista
-              Jamixissa</a>
-            <button class="food-menu-button" onclick="document.querySelector('#menu-dialog').close()">Sulje
-              ruokalista</button>
           </div>
         </dialog>
       </div>
@@ -203,7 +203,8 @@
   </div>
   <footer>
     <p>Verkkosivua kehittää ja ylläpitää <a href="https://raikas.dev">Roni Äikäs</a> (24b). <a
-        href="https://github.com/raikasdev/lukio">Lähdekoodi</a></p>
+        href="https://github.com/raikasdev/lukio">Lähdekoodi</a>. <a href="https://forms.gle/sYTEuoHGb4jNBcdo6">Anna
+        palautetta ja ideoita</a></p>
     <p>Tämä verkkosivu ei ole Jämsän lukion ylläpitämä tai hyväksymä.</p>
   </footer>
   <script src="menu.js"></script>

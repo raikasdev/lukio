@@ -181,6 +181,11 @@ h1 {
   margin-top: 2rem;
 }
 
+.menu-type-grid.buttons.top {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
 .food-menu-button {
   background-color: white;
   color: #005bbc;
@@ -222,7 +227,6 @@ h1 {
 #menu-dialog .food-menu-button {
   background-color: #005bbc;
   color: white;
-  margin-top: 2rem;
 }
 
 #menu-dialog .food-menu-button:hover,

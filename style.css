@@ -210,6 +210,11 @@ h1 {
   padding: 2.5rem 4rem;
 }
 
+#time-dialog {
+  overflow-x: hidden;
+}
+
+
 #menu-dialog .menu-type-grid:not(.buttons) {
   gap: 5rem;
 }
@@ -299,6 +304,9 @@ tr th {
 
 table {
   border-spacing: 2rem 5px;
+  max-width: 100%;
+    overflow-x: auto;
+    display: block
 }
 
 #random-fact {

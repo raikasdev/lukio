@@ -311,6 +311,7 @@ table {
 
 #random-fact {
   max-width: 650px;
+  line-height: 1.625;
   margin: 0 auto;
 }
 #random-fact a {

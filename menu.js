@@ -9,12 +9,22 @@ const VEGETARIAN_MENU = 350;
 
 // The magic
 async function getMenu() {
-  const customerId = 96665;
-  const kitchenId = 4; // These are from the Jamix API
   const startDate = getWeekDayGetter(1);
   const endDate = getWeekDayGetter(5); // From monday-friday of the current week
 
-  const url = `https://fi.jamix.cloud/apps/menuservice/rest/haku/menu/${customerId}/${kitchenId}?lang=fi&date=${formatDate(startDate)}&date2=${formatDate(endDate)}`;
+  const cache = localStorage.getItem('menu-cache');
+  if (cache) {
+    const { date, data } = JSON.parse(cache);
+    if (date === formatDate(new Date())) {
+      document.querySelector('#menu-items').innerHTML = data.normal.today;
+      document.querySelector('#full-menu').innerHTML = data.normal.weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
+      document.querySelector('#vege-menu-items').innerHTML = data.vegetarian.today;
+      document.querySelector('#full-vege-menu').innerHTML = data.vegetarian.weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
+      return;
+    }
+  }
+
+  const url = `https://fi.jamix.cloud/apps/menuservice/rest/haku/menu/${CUSTOMER_ID}/${KITCHEN_ID}?lang=fi&date=${formatDate(startDate)}&date2=${formatDate(endDate)}`;
   const res = await fetch(url);
   const [{ menuTypes }] = await res.json();
   const { menus } = menuTypes.find((menu) => menu.menuTypeName === "Koulut");
@@ -25,6 +35,8 @@ async function getMenu() {
   document.querySelector('#full-menu').innerHTML = parseMenu(normalMenu).weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
   document.querySelector('#vege-menu-items').innerHTML = parseMenu(vegetarianMenu).today;
   document.querySelector('#full-vege-menu').innerHTML = parseMenu(vegetarianMenu).weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
+
+  localStorage.setItem('menu-cache', JSON.stringify({ date: formatDate(new Date()), data: { normal: parseMenu(normalMenu), vegetarian: parseMenu(vegetarianMenu) } }));
 }
 
 getMenu();

@@ -73,7 +73,7 @@ function parseMenu(menu) {
   const weekMenu = menu.days.map((i) => ({ date: i.date, dateString: formatDateToHuman(i.date), menu: parseDay(i) })).sort((a,b) => a.date - b.date);  
   
   return {
-    today: weekMenu.find((i) => i.date == formatDate(new Date())?.menu ?? 'Ei ruokaa tänään',
+    today: weekMenu.find((i) => i.date == formatDate(new Date()))?.menu ?? 'Ei ruokaa tänään',
     weekMenu
   }
 }

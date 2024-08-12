@@ -45,7 +45,7 @@ function formatDate(date) {
 
 // Generate a function that gets the specified week day (0 = Sunday, 1 = Monday, ..., 6 = Saturday) from a date
 function getWeekDayGetter(day) {
-  const result = new Date('2024-08-12');
+  const result = new Date();
   result.setDate(result.getDate() + day - result.getDay());
   return result;
 }
@@ -73,7 +73,7 @@ function parseMenu(menu) {
   const weekMenu = menu.days.map((i) => ({ date: i.date, dateString: formatDateToHuman(i.date), menu: parseDay(i) })).sort((a,b) => a.date - b.date);  
   
   return {
-    today: weekMenu.find((i) => i.date == formatDate(new Date('2024-08-12')))?.menu ?? 'Ei ruokaa tänään',
+    today: weekMenu.find((i) => i.date == formatDate(new Date())?.menu ?? 'Ei ruokaa tänään',
     weekMenu
   }
 }

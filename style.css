@@ -83,8 +83,8 @@ h1 {
 .link-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: calc(1024px * 1.5);
+  grid-template-columns: repeat(3, 1fr);
+  max-width: calc(1024px * 1.25);
   margin: 0 auto;
 }
 
@@ -266,4 +266,12 @@ tr th:first-child {
 
 table {
   border-spacing: 2rem 5px;
+}
+
+#random-fact {
+  max-width: 650px;
+  margin: 0 auto;
+}
+#random-fact a {
+  color: white;
 }

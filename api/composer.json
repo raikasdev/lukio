@@ -1,0 +1,19 @@
+{
+    "name": "raikasdev/lukio-api",
+    "type": "project",
+    "require": {
+        "erusev/parsedown": "^1.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Raikasdev\\LukioApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "raikasdev",
+            "email": "roni.aikas@gmail.com"
+        }
+    ]
+}

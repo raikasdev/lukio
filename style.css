@@ -59,6 +59,20 @@ header {
   border-radius: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  header {
+    padding: 2rem 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .menu.box h2 svg {
+    display: none;
+  }
+}
+
 header p {
   margin-bottom: 0;
 }

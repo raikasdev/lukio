@@ -25,6 +25,7 @@ async function getMenu() {
   }
 
   const url = `https://fi.jamix.cloud/apps/menuservice/rest/haku/menu/${CUSTOMER_ID}/${KITCHEN_ID}?lang=fi&date=${formatDate(startDate)}&date2=${formatDate(endDate)}`;
+  try {
   const res = await fetch(url);
   const [{ menuTypes }] = await res.json();
   const { menus } = menuTypes.find((menu) => menu.menuTypeName === "Koulut");
@@ -37,6 +38,12 @@ async function getMenu() {
   document.querySelector('#full-vege-menu').innerHTML = parseMenu(vegetarianMenu).weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
 
   localStorage.setItem('menu-cache', JSON.stringify({ date: formatDate(new Date()), data: { normal: parseMenu(normalMenu), vegetarian: parseMenu(vegetarianMenu) } }));
+  } catch (e) {
+    document.querySelector('#menu-items').innerHTML = 'Ruokalistan haku epäonnistui. Jamix-tietopalvelu taitaa olla alhaalla. Yritä hetken päästä uudelleen :)';
+    document.querySelector('#full-menu').innerHTML = 'Ruokalistan haku epäonnistui. Jamix-tietopalvelu taitaa olla alhaalla. Yritä hetken päästä uudelleen :)';
+    document.querySelector('#vege-menu-items').innerHTML = 'Ruokalistan haku epäonnistui. Jamix-tietopalvelu taitaa olla alhaalla. Yritä hetken päästä uudelleen :)';
+    document.querySelector('#full-vege-menu').innerHTML = 'Ruokalistan haku epäonnistui. Jamix-tietopalvelu taitaa olla alhaalla. Yritä hetken päästä uudelleen :)';
+  }
 }
 
 getMenu();

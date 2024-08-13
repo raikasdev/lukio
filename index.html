@@ -101,7 +101,7 @@
         <div class="menu-type-grid buttons">
           <button class="food-menu-button" onclick="document.querySelector('#time-dialog').showModal()">Tarkista
             ruokailun aikataulut</a>
-            <button class="food-menu-button" onclick="document.querySelector('#menu-dialog').showModal()">Avaa koko
+            <button class="food-menu-button" onclick="openMenuDialog()">Avaa koko
               viikon ruokalista</button>
         </div>
         <dialog id="time-dialog">
@@ -151,14 +151,8 @@
           </div>
         </dialog>
         <dialog id="menu-dialog">
-          <div class="menu-type-grid buttons top">
-            <a href="https://fi.jamix.cloud/apps/menu/?anro=96665" class="food-menu-button secondary">Avaa ruokalista
-              Jamixissa</a>
-            <button class="food-menu-button" onclick="document.querySelector('#menu-dialog').close()">Sulje
-              ruokalista</button>
-          </div>
           <div class="menu-type-grid">
-            <div class="menu-type">
+            <div autofocus class="menu-type">
               <h3>Ruokalista</h3>
               <div id="full-menu">
                 Ladataan ruokalistaa...
@@ -170,6 +164,12 @@
                 Ladataan ruokalistaa...
               </div>
             </div>
+          </div>
+          <div class="menu-type-grid buttons">
+            <a href="https://fi.jamix.cloud/apps/menu/?anro=96665" class="food-menu-button secondary">Avaa ruokalista
+              Jamixissa</a>
+            <button class="food-menu-button" onclick="document.querySelector('#menu-dialog').close()">Sulje
+              ruokalista</button>
           </div>
         </dialog>
       </div>
@@ -207,6 +207,14 @@
         palautetta ja ideoita</a></p>
     <p>Tämä verkkosivu ei ole Jämsän lukion ylläpitämä tai hyväksymä.</p>
   </footer>
+  <script>
+    function openMenuDialog() {
+      const menu = document.querySelector('#menu-dialog');
+      menu.inert = true;
+      menu.showModal();
+      menu.inert = false;
+    }
+  </script>
   <script src="menu.js"></script>
   <script src="fact.js"></script>
   <script src="day-counter.js"></script>

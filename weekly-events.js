@@ -4,14 +4,29 @@ function capitalize(string) {
 
 async function getEvents() {
   try {
+    let cacheDate;
+    if (localStorage.getItem('events-cache')) {
+      const { date, data: cacheData } = JSON.parse(localStorage.getItem('events-cache'));
+      cacheDate = date;
+      processData(cacheData, date);
+    }
     const res = await fetch('https://lukio.raikas.dev/tiedotteet/events.json');
     const data = await res.json();
     const lastUpdated = new Date(res.headers.get('last-modified')).toLocaleDateString('fi');
+    if (cacheDate && lastUpdated === cacheDate) {
+      return;
+    }
 
-    // { events: { 'YYYY-MM-DD': [ 'Event name', 'Event 2 name' ] }, upcoming: { 'YYYY-MM-DD': ['Event name', 'Event 2 name']}, extra: ['Event name'] }
+    processData(data, lastUpdated);
+    localStorage.setItem('events-cache', JSON.stringify({ date: lastUpdated, data }));
+  } catch (e) {
+    document.querySelector('#week-bulletin-events').innerHTML = 'Viikkotiedotteen haku epäonnistui :(';
+    console.error(e);
+  }
+}
 
-    // Sort by date, oldest first
-    const events = Object
+function processData(data, lastUpdated) {
+  const events = Object
       .keys(data.events)
       .map((date) => ({
         date: capitalize(
@@ -43,10 +58,7 @@ async function getEvents() {
     const extra = data.extra.length > 0 ? `<h4>Muuta ajankohtaista</h4><p>${data.extra.join("<br>")}</p>` : "";
     const upcomingEvents = `<h4>Tulevaa</h4><p>${upcoming.map((event) => `<strong>${event.date}</strong>: ${event.events}`).join("<br>")}`;
     document.querySelector('#week-bulletin-events').innerHTML = weekEvents + extra + upcomingEvents;
-    console.log(events);
-  } catch (e) {
-    console.error(e);
-  }
+    document.querySelector('#last-updated').innerHTML = lastUpdated;
 }
 
 getEvents();

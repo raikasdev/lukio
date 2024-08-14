@@ -174,10 +174,17 @@
       createKeyboard();
     }
 
+    function b64Decode(str) {
+      // Going backwards: from bytestream, to percent-encoding, to original string.
+      return decodeURIComponent(atob(str).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+    }
+
     async function fetchWord() {
       const response = await fetch(API_URL);
       const base64Text = await response.text();
-      return atob(base64Text);
+      return b64Decode(base64Text);
     }
 
     function updateDisplay() {

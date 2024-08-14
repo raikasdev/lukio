@@ -69,6 +69,11 @@
       color: white;
     }
 
+    .key.missing {
+      background-color: #B23A48;
+      color: white;
+    }
+
     .key:disabled {
       cursor: not-allowed;
     }
@@ -209,6 +214,7 @@
           const button = document.createElement('button');
           button.textContent = letter;
           button.className = 'key';
+          button.dataset.letter = letter;
           button.addEventListener('click', () => handleGuess(letter, button));
           rowDiv.appendChild(button);
         });
@@ -240,12 +246,17 @@
 
     function checkGameOver() {
       if (displayedWord === word) {
-        document.getElementById('message').textContent = 'VOITTO';
+        document.getElementById('message').textContent = 'VOITIT PELIN!';
         document.getElementById('restart').style.display = 'block';
         disableAllKeys();
       } else if (wrongGuesses >= maxWrongGuesses) {
-        document.getElementById('message').textContent = 'HÄVIÖ';
+        document.getElementById('message').textContent = 'HÄVISIT PELIN :(';
         document.getElementById('restart').style.display = 'block';
+        new Set([...word.split('')].filter(c => !displayedWord.split('').includes(c))).forEach((letter) => {
+          document.querySelectorAll(`.key[data-letter=${letter}]`).forEach(button => {
+            button.classList.add('missing');
+          });
+        })
         displayedWord = word;  // reveal the word on loss
         updateDisplay();
         disableAllKeys();

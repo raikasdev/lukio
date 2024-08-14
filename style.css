@@ -321,3 +321,17 @@ table {
 #random-fact a {
   color: white;
 }
+
+#week-bulletin-events {
+  line-height: 1.625;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+#week-bulletin-events h4 {
+  margin: 0.5rem 0;
+}
+
+#week-bulletin-events p {
+  margin: 0;
+}

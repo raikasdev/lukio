@@ -2,3 +2,4 @@ node_modules
 paistopiste/output/*.csv
 paistopiste/output/*.json
 vendor
+events.json

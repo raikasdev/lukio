@@ -335,3 +335,9 @@ table {
 #week-bulletin-events p {
   margin: 0;
 }
+
+@media screen and (min-width: 640px) {
+  #week-bulletin-events p {
+    margin-left: 1rem;
+  }
+}

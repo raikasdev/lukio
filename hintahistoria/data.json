@@ -1,0 +1,869 @@
+{
+  "total": 11,
+  "from": 0,
+  "limit": 100,
+  "searchProvider": "loop54",
+  "items": [
+    {
+      "id": "7340131603798",
+      "ean": "7340131603798",
+      "name": "NOCCO BCAA Berruba 330ml",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "nocco-bcaa-berruba-330ml",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "NOCCO BCAA Berruba 330ml",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/9UmaZ25hqVr8Ludw5jO8_-.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131603811",
+      "ean": "7340131603811",
+      "name": "NOCCO BCAA San Citro 330 ml",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "nocco-bcaa-san-citro-330-ml",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "NOCCO Summer Edition 2 2024 330ml",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/8w4K2_1U4DrAsIWZ_6ELeJ.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131602906",
+      "ean": "7340131602906",
+      "name": "330ml NOCCO Focus Ramonade energiajuoma",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "330ml-nocco-focus-ramonade-energiajuoma",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "330ml NOCCO Focus Ramonade energiajuoma",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/B3jPyHgx46F9aYfTPd7D5C.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131603705",
+      "ean": "7340131603705",
+      "name": "NOCCO Focus Grand Sour 330ml",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "nocco-focus-grand-sour-330ml",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "NOCCO Focus Grand Sour 330ml",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/DwqNplvda9S86RzkiOUAx5.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131603446",
+      "ean": "7340131603446",
+      "name": "NOCCO BCAA Juicy Ruby 330ml",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "nocco-bcaa-juicy-ruby-330ml",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "NOCCO BCAA Juicy Ruby 330ml",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/45W9A1y8q4n8tIZ0nuuI_o.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131603330",
+      "ean": "7340131603330",
+      "name": "330ml NOCCO FOCUS Black Orange",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "330ml-nocco-focus-black-orange",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "330ml NOCCO FOCUS Black Orange",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/BPYTQPEA4spBJtn69zajTj.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131602265",
+      "ean": "7340131602265",
+      "name": "330ml NOCCO BCAA Sunny Soda, hiilihapotettu energiajuoma",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "330ml-nocco-bcaa-sunny-soda-hiilihapotettu-energiajuoma",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "330ml NOCCO BCAA Sunny Soda, hiilihapotettu energiajuoma",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/BN0DzA0H47iB85pn7XdCEb.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131603699",
+      "ean": "7340131603699",
+      "name": "NOCCO BCAA Golden Era 330ml",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "nocco-bcaa-golden-era-330ml",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "NOCCO BCAA Golden Era 330ml",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/CSo8wCW043KBzHBdiYiPtP.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131603231",
+      "ean": "7340131603231",
+      "name": "330ml NOCCO Focus Pearade energiajuoma",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "330ml-nocco-focus-pearade-energiajuoma",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "330ml NOCCO Focus Pearade energiajuoma",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/8YelvtchK_K9r6f_YIQn7E.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131603439",
+      "ean": "7340131603439",
+      "name": "NOCCO BCAA Juicy Melba 330ml",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "nocco-bcaa-juicy-melba-330ml",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561835",
+          "name": "Energiajuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "1591691224561833",
+          "name": "Energiajuomat ja urheilujuomat",
+          "slug": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "NOCCO BCAA Juicy Melba 330ml",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/9YBxZpkfa30AXMN4t8s9Qb.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    },
+    {
+      "id": "7340131601985",
+      "ean": "7340131601985",
+      "name": "330ml NOCCO BCAA Limón Del Sol",
+      "price": 2.69,
+      "storeId": "660919473",
+      "pricing": {
+        "campaignPrice": null,
+        "lowest30DayPrice": null,
+        "campaignPriceValidUntil": null,
+        "regularPrice": 2.69,
+        "currentPrice": 2.69,
+        "__typename": "ProductPricing"
+      },
+      "__typename": "Product",
+      "approxPrice": false,
+      "basicQuantityUnit": "KPL",
+      "comparisonPrice": 7.7,
+      "comparisonUnit": "LTR",
+      "consumerPackageSize": null,
+      "consumerPackageUnit": null,
+      "priceUnit": "KPL",
+      "quantityMultiplier": 1,
+      "isForceSalesByCount": false,
+      "brandName": "Nocco",
+      "slug": "330ml-nocco-bcaa-limon-del-sol",
+      "isAgeLimitedByAlcohol": false,
+      "isNewProduct": false,
+      "frozen": false,
+      "packagingLabels": [],
+      "packagingLabelCodes": [],
+      "hierarchyPath": [
+        {
+          "id": "1591691224561860",
+          "name": "Kausijuomat",
+          "slug": "juomat-1/kausijuomat",
+          "__typename": "HierarchyPathItem"
+        },
+        {
+          "id": "Herkku_00000005",
+          "name": "Juomat",
+          "slug": "juomat-1",
+          "__typename": "HierarchyPathItem"
+        }
+      ],
+      "isGlobalFallback": null,
+      "countryName": {
+        "fi": "Alankomaat",
+        "__typename": "CountryName"
+      },
+      "productDetails": {
+        "productImages": {
+          "modifiersString": "{MODIFIERS}",
+          "extensionString": "{EXTENSION}",
+          "mainImage": {
+            "name": "330ml NOCCO BCAA Limón Del Sol",
+            "urlTemplate": "https://cdn.s-cloud.fi/v1/{MODIFIERS}/assets/dam-id/0em2bj5IaXp8uc0hsRqwLK.{EXTENSION}",
+            "__typename": "ProductImage"
+          },
+          "mobileReadyHeroImage": null,
+          "variableImages": [],
+          "__typename": "ProductImages"
+        },
+        "__typename": "ProductDetails",
+        "wineSweetness": null
+      },
+      "depositPrice": 0.15
+    }
+  ],
+  "structuredFacets": [
+    {
+      "key": "brandName",
+      "stringValue": [
+        "Nocco"
+      ],
+      "__typename": "StringFacet"
+    },
+    {
+      "key": "category",
+      "objectValue": [
+        {
+          "name": "Juomat",
+          "value": "juomat-1",
+          "doc_count": 11,
+          "__typename": "ObjectFacetValue"
+        },
+        {
+          "name": "Energiajuomat ja urheilujuomat",
+          "value": "juomat-1/energiajuomat-ja-urheilujuomat",
+          "doc_count": 10,
+          "__typename": "ObjectFacetValue"
+        },
+        {
+          "name": "Energiajuomat",
+          "value": "juomat-1/energiajuomat-ja-urheilujuomat/energiajuomat",
+          "doc_count": 10,
+          "__typename": "ObjectFacetValue"
+        },
+        {
+          "name": "Kausijuomat",
+          "value": "juomat-1/kausijuomat",
+          "doc_count": 1,
+          "__typename": "ObjectFacetValue"
+        }
+      ],
+      "__typename": "ObjectFacet"
+    },
+    {
+      "key": "labels",
+      "stringValue": [
+        "GLUTEN_FREE",
+        "LOW_LACTOSE",
+        "LACTOSE_FREE",
+        "VEGAN",
+        "ORGANIC",
+        "CONCENTRATION",
+        "S_10000000000013"
+      ],
+      "__typename": "StringFacet"
+    }
+  ],
+  "__typename": "ProductList"
+}

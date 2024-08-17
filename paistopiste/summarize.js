@@ -77,7 +77,7 @@ function calculatePriceChanges(prices) {
       const direction = changePercentage > 0 ? "noussut" : "laskenut";
 
       results[product] = {
-        text: `Hinta on ${direction} ${formattedPercentage}% viimeisen 6 kuukauden aikana. ${comparisonPrice.toLocaleString('fi', { style: 'currency', currency: 'EUR' })} -> ${latestPrice.toLocaleString('fi', { style: 'currency', currency: 'EUR' })} (${comparisonDate})`,
+        text: `Hinta on ${direction} ${formattedPercentage}% viimeisen 6 kuukauden aikana. ${comparisonPrice.toLocaleString('fi', { style: 'currency', currency: 'EUR' })} -> ${latestPrice.toLocaleString('fi', { style: 'currency', currency: 'EUR' })} (${new Date(comparisonDate).toLocaleDateString('fi')})`,
         direction: changePercentage > 0 ? 'up' : 'down'
       };
     }

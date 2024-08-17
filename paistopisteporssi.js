@@ -11,7 +11,13 @@ const allFeatured = [
   'Riisipiirakka',
   'Lihapasteija',
   'Nakkicroissant',
-]
+  'Munkkirinkeli',
+  'Suklaadonitsi',
+  'Berliininmunkki',
+  'Vaniljakreemidonitsi',
+  'Korvapuusti',
+  'Fazer Dallaspulla',
+];
 
 const simpleHash = str => {
   let hash = 0;
@@ -22,6 +28,30 @@ const simpleHash = str => {
   // Convert to 32bit unsigned integer in base 36 and pad with "0" to ensure length is 7.
   return (hash >>> 0).toString(36).padStart(7, '0');
 };
+
+function sortByFeatured(items) {
+  // Create a map for quick lookup of featured indices
+  const featuredMap = new Map(allFeatured.map((name, index) => [name, index]));
+  
+  return items.sort((a, b) => {
+    const indexA = featuredMap.get(a.name);
+    const indexB = featuredMap.get(b.name);
+    
+    if (indexA !== undefined && indexB !== undefined) {
+      // Both items are featured, sort by their order in the featured array
+      return indexA - indexB;
+    } else if (indexA !== undefined) {
+      // Only a is featured, it should come first
+      return -1;
+    } else if (indexB !== undefined) {
+      // Only b is featured, it should come first
+      return 1;
+    } else {
+      // Neither is featured, maintain original order
+      return 0;
+    }
+  });
+}
 
 async function loadCachedAPI(url) {
   // Cache that lasts until 9:30 AM tomorrow
@@ -52,8 +82,7 @@ async function loadCachedAPI(url) {
 async function processData(data, prices) {
   const { lastUpdated, changes } = data;
   const products = loadAll
-    ? Object.keys(changes).map((i) => ({ name: i, ...changes[i] }))
-      .sort((a, b) => allFeatured.includes(a.name) ? -1 : allFeatured.includes(b.name) ? 1 : 0)
+    ? sortByFeatured(Object.keys(changes).map((i) => ({ name: i, ...changes[i] })))
     : featuredProducts.map((product) => ({
         name: product,
         ...changes[product],

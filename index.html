@@ -210,6 +210,21 @@
           Lasketaan jäljellä olevia koulupäiviä...
         </div>
       </div>
+      <div class="menu box lidl-box">
+        <h2 class="lidl">
+          Paistopistepörssi
+        </h2>
+        <p class="description">Pörssistä näet onko tuotteen hinta muuttunut viimeisen
+          6 kuukauden aikana, tai kuinka kauan nykyinen hinta on ollut voimassa.</p>
+        <div id="lidl-prices">
+          Ladataan hintahistoriatietoja...
+        </div>
+        <a href="/paistopiste" class="button">Katso kaikki tuotteet</a>
+        <p class="disclaimer">Lataa hintahistoria taulukkotiedostona itsellesi: <a
+            href="https://paistopiste.raikas.dev">paistopiste.raikas.dev</a>. Päivitetty viimeksi: <span
+            id="lidl-last-updated">ladataan...</span>
+        </p>
+      </div>
       <div class="menu box">
         <h2>
           Satunnainen fakta Wikipediasta
@@ -239,6 +254,7 @@
   <script src="fact.js"></script>
   <script src="day-counter.js"></script>
   <script src="weekly-events.js?v2"></script>
+  <script src="paistopisteporssi.js"></script>
   <script defer data-domain="lukio.raikas.dev" src="https://plausible.mikroni.fi/js/script.js"></script>
 </body>
 

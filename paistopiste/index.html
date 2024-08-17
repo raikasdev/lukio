@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LIDL Paistopistepörssi</title>
+  <meta name="description" content="Lidlin paistopisteen tuotteiden hintahistoria">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css?v3">
+</head>
+
+<body>
+  <div class="content">
+    <header>
+      <h1>LIDL Paistopistepörssi</h1>
+      <p>LIDLin paistopisteen hintaseurantabotti palveluksessasi.</p>
+      <p>Pörssistä näet onko tuotteen hinta muuttunut viimeisen
+        6kk aikana tai kuinka kauan nykyinen hinta on ollut voimassa.</p>
+      <p>Huomioithan että hintahistorian kerääminen aloitettiin
+        11.8.2024, eikä tätä edeltävää hintatietoa ole saatavilla.</p>
+      <p>Voit myös ladata koko hintahistoriatietokannan taulukkotiedostona osoitteesta <a
+          href="https://paistopiste.raikas.dev">paistopiste.raikas.dev</a>.</p>
+    </header>
+    <main>
+      <div class="menu box lidl-box">
+        <div id="lidl-prices">
+          <p>Ladataan hintatietoja...</p>
+        </div>
+        <p class="disclaimer">Lataa hintahistoria taulukkotiedostona itsellesi: <a
+            href="https://paistopiste.raikas.dev">paistopiste.raikas.dev</a>. Päivitetty viimeksi: <span
+            id="lidl-last-updated">ladataan...</span>
+        </p>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <p>Verkkosivua kehittää ja ylläpitää <a href="https://raikas.dev">Roni Äikäs</a> (24b). <a
+        href="https://github.com/raikasdev/lukio">Lähdekoodi</a>. <a href="https://forms.gle/sYTEuoHGb4jNBcdo6">Anna
+        palautetta ja ideoita</a></p>
+    <p>Tämä verkkosivu ei ole Jämsän lukion tai LIDLin ylläpitämä tai hyväksymä.</p>
+  </footer>
+  <script>
+    window.LOAD_ALL_PRODUCTS = true;
+  </script>
+  <script src="/paistopisteporssi.js"></script>
+  <script defer data-domain="lukio.raikas.dev" src="https://plausible.mikroni.fi/js/script.js"></script>
+</body>
+
+</html>

@@ -66,7 +66,6 @@ async function loadCachedAPI(url) {
 
   const res = await fetch(url);
   const data = await res.json();
-
   const expires = new Date();
   expires.setHours(9, 30, 0, 0);
   expires.setDate(expires.getDate() + 1);
@@ -79,7 +78,7 @@ async function loadCachedAPI(url) {
   return data;
 }
 
-async function processData(data, prices) {
+async function processPorssiData(data, prices) {
   const { lastUpdated, changes } = data;
   const products = loadAll
     ? sortByFeatured(Object.keys(changes).map((i) => ({ name: i, ...changes[i] })))
@@ -130,8 +129,7 @@ async function processData(data, prices) {
 async function run() {
   const changes = await loadCachedAPI("https://paistopiste.raikas.dev/price-changes.json");
   const prices = await loadCachedAPI("https://paistopiste.raikas.dev/prices.json");
-
-  processData(changes, prices);
+  await processPorssiData(changes, prices);
 }
 
 run();

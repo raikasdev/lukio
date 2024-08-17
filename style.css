@@ -430,3 +430,8 @@ table {
   background-color: #D1E1F3;
   cursor: pointer;
 }
+
+h2,
+h1 {
+  hyphens: auto;
+}

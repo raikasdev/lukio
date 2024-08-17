@@ -1,9 +1,17 @@
 const loadAll = window.LOAD_ALL_PRODUCTS || false;
-const featuredProducts = [
+const featuredProducts = [ // On the front page
   "Juusto-pekonisämpylä",
   "Kinkku-juustocroissant",
   "Valkosipulivoipatonki",
 ];
+
+// Featured on the ALl products listing page
+const allFeatured = [
+  ...featuredProducts,
+  'Riisipiirakka',
+  'Lihapasteija',
+  'Nakkicroissant',
+]
 
 const simpleHash = str => {
   let hash = 0;
@@ -45,6 +53,7 @@ async function processData(data, prices) {
   const { lastUpdated, changes } = data;
   const products = loadAll
     ? Object.keys(changes).map((i) => ({ name: i, ...changes[i] }))
+      .sort((a, b) => allFeatured.includes(a.name) ? -1 : allFeatured.includes(b.name) ? 1 : 0)
     : featuredProducts.map((product) => ({
         name: product,
         ...changes[product],

@@ -73,7 +73,7 @@
           </div>
           <dialog id="dialog-${simpleHash(i.name)}">
             <h3>${i.name}</h3>
-            <p>${Object.keys(i.stores).map((storeName) => `${storeName}: ${i.stores[storeName].price} €`).join("<br>")}</p>
+            <p>${Object.keys(i.stores).sort((a, b) => i.stores[b].price - i.stores[a].price).map((storeName) => `${storeName}: ${i.stores[storeName].price} €`).join("<br>")}</p>
             <button class="button" onclick="document.querySelector('#dialog-${simpleHash(i.name)}').close()">Sulje</button>
           </dialog>
           `).join("\n");  

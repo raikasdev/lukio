@@ -1,4 +1,4 @@
-const throttleMs = 100; // Default throttle time, configurable
+const throttleMs = 1000; // Default throttle time, configurable
 const queues = new Map();
 const lastFetchTimes = new Map();
 

@@ -478,6 +478,9 @@ h1 {
 }
 #product-prices .product img {
   padding: 1rem;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
 }
 #product-prices .product-info {
   padding: 0;

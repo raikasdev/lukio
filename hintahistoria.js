@@ -63,11 +63,13 @@
             <img alt="${i.name}" loading="lazy" height="210"
               src="${i.image}">
             <div class="product-info">
+              <div class="product-text-info">
               <h3>${i.name}</h3>
               <p class="price">
                 ${i.price} €
               </p>
               <p class="history">${i.cheapestStore}</p>
+              </div>
               <button class="button" onclick="openModal('${simpleHash(i.name)}')">Lisätietoja</button>
             </div>
           </div>

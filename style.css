@@ -472,13 +472,22 @@ h1 {
   margin-top: 1rem;
 }
 
+.product {
+  display: flex;
+  flex-direction: column;
+}
 #product-prices .product img {
   padding: 1rem;
 }
 #product-prices .product-info {
   padding: 0;
   margin: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
+
 #product-prices .button {
   background-color: #005bbc;
   color: white;
@@ -497,7 +506,7 @@ h1 {
   background-color: #005bbc;
   color: white;
   border-radius: 0.5rem;
-  width: 100%;
+  width: calc(100% - 2rem* 2);
 }
 
 .product-search-box h2 {

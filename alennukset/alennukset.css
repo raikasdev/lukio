@@ -11,6 +11,18 @@ p.description {
   gap: 2rem;
 }
 
+@media (max-width: 1024px) {
+  .benefit-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .benefit-grid .box {
   margin: 0;
 }

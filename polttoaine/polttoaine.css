@@ -1,0 +1,49 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Ozone';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Ozone.ttf') format('truetype'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.gas-price-box {
+  background-color: black;
+  color: #e94f47;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  font-family: Ozone, sans-serif;
+  font-size: 6rem;
+  text-shadow: 
+    0 0 10px rgba(255, 102, 0, 0.5),
+    0 0 20px rgba(255, 102, 0, 0.4),
+    0 0 30px rgba(255, 102, 0, 0.3),
+    0 0 40px rgba(255, 102, 0, 0.2); /* Multiple layers of text-shadow */
+
+}
+.gas-price-box.diesel {
+  color: rgb(92, 221, 129);
+  text-shadow: 
+    0 0 10px rgba(56, 199, 94, 0.7),
+    0 0 20px rgba(56, 199, 94, 0.6),
+    0 0 30px rgba(56, 199, 94, 0.5),
+    0 0 40px rgba(56, 199, 94, 0.4); /* Multiple layers of text-shadow */
+}
+
+.stations {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: fit-content;
+}
+
+main .menu.box {
+  margin: 0;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}

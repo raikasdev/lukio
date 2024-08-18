@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Polttoaineen hinta</title>
+  <meta name="description" content="Mistä saa halvimmalla löpöä Jämsässä?">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css?v7">
+  <link rel="stylesheet" href="polttoaine.css">
+</head>
+
+<body>
+  <div class="content">
+    <header>
+      <h1>Polttoaineen hinta</h1>
+      <p>Polttoaineen hinnat haetaan <a href="https://www.tankille.fi/" target="_blank"
+          rel="noopener noreferrer">tankille.fi</a>n rajapinnasta. Sovelluksen avulla voit nähdä esimerkiksi hinnan
+        kehityksen.</p>
+      <p>Palvelun tiedot ovat käyttäjien syöttämiä ja ne eivät välttämättä ole oikeita. Palvelun ylläpitäjä ei vastaa
+        hintojen oikeellisuudesta.</p>
+    </header>
+    <main>
+      <div class="menu box">
+        <h2>Halvin 95 E10</h2>
+        <div class="gas-price-box" id="cheapest-95">
+          ?.???
+        </div>
+        <table id="cheapest-95-stations" class="stations">
+          <tr>
+            <th>Nimi</th>
+            <th>Hinta</th>
+          </tr>
+        </table>
+      </div>
+      <div class="menu box">
+        <h2>Halvin 98 E5</h2>
+        <div class="gas-price-box" id="cheapest-98">
+          ?.???
+        </div>
+        <table id="cheapest-98-stations" class="stations">
+          <tr>
+            <th>Nimi</th>
+            <th>Hinta</th>
+          </tr>
+        </table>
+      </div>
+      <div class="menu box">
+        <h2>Halvin Diesel</h2>
+        <div class="gas-price-box diesel" id="cheapest-dsl">
+          ?.???
+        </div>
+        <table id="cheapest-dsl-stations" class="stations">
+          <tr>
+            <th>Nimi</th>
+            <th>Hinta</th>
+          </tr>
+        </table>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <p>Verkkosivua kehittää ja ylläpitää <a href="https://raikas.dev">Roni Äikäs</a> (24b). <a
+        href="https://github.com/raikasdev/lukio">Lähdekoodi</a>. <a href="https://forms.gle/sYTEuoHGb4jNBcdo6">Anna
+        palautetta ja ideoita</a></p>
+    <p>Tämä verkkosivu ei ole Jämsän lukion ylläpitämä tai hyväksymä.</p>
+  </footer>
+  <script src="polttoaine.js"></script>
+  <script defer data-domain="lukio.raikas.dev" src="https://plausible.mikroni.fi/js/script.js"></script>
+</body>
+
+</html>

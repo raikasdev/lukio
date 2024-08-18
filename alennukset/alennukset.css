@@ -1,0 +1,16 @@
+p.description {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: calc(1024px + 2rem * 2);
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.benefit-grid .box {
+  margin: 0;
+}

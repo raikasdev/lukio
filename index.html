@@ -183,7 +183,7 @@
           </div>
         </dialog>
       </div>
-      <div class="menu box">
+      <div class="menu box" data-scroll-to="weekly-bulletin">
         <h2>
           Viikkotiedote pähkinänkuoressa
         </h2>
@@ -195,7 +195,7 @@
           se saattaa sisältää virheitä. Päivitetty viimeksi: <span id="last-updated">ladataan...</span>
         </p>
       </div>
-      <div class="menu box">
+      <div class="menu box" data-scroll-to="holiday">
         <h2>
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -212,7 +212,7 @@
           Lasketaan jäljellä olevia koulupäiviä...
         </div>
       </div>
-      <div class="menu box lidl-box">
+      <div class="menu box lidl-box" data-scroll-to="lidl">
         <h2 class="lidl">
           LIDL Paisto&shy;piste&shy;pörssi
         </h2>
@@ -221,13 +221,13 @@
         <div id="lidl-prices">
           Ladataan hintahistoriatietoja...
         </div>
-        <a href="/paistopiste" class="button">Katso kaikki tuotteet</a>
-        <p class="disclaimer">Lataa hintahistoria taulukkotiedostona itsellesi: <a
-            href="https://paistopiste.raikas.dev">paistopiste.raikas.dev</a>. Päivitetty viimeksi: <span
+        <a href="/paistopiste" class="button" onclick="plausible('Go to paistopiste')">Katso kaikki tuotteet</a>
+        <p class="disclaimer">Lataa hintahistoria taulukkotiedostona itsellesi: <a href="https://paistopiste.raikas.dev"
+            onclick="plausible('Outbound paistopiste')">paistopiste.raikas.dev</a>. Päivitetty viimeksi: <span
             id="lidl-last-updated">ladataan...</span>
         </p>
       </div>
-      <div class="menu box nocco-box">
+      <div class="menu box nocco-box" data-scroll-to="nocco">
         <h2>
           <span class="sr-only">NOCCO</span>
           <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 0 800 263">
@@ -241,13 +241,14 @@
         <div id="nocco-index"></div>
         <p class="no-nocco-for-you">Eikö NOCCO ole sinun makuusi? No ei hätää! Hintavertailusta löydät kaikki yli 150
           Jämsästä saatavilla olevaa energiajuomaa.</p>
-        <a href="/hintahistoria" class="button">Avaa hintavertailusivu</a>
+        <a href="/hintahistoria" class="button" onclick="plausible('Go to hintavertailusivu')">Avaa
+          hintavertailusivu</a>
         <p class="disclaimer">Hintavertailussa on mukana K-Citymarket, K-Market ja S-Market. LIDLillä ei ole
           rajapintaa
           josta saisi normaalien tuotteiden hintoja.</span>
         </p>
       </div>
-      <div class="menu box">
+      <div class="menu box" data-scroll-to="random-fact">
         <h2>
           Satunnainen fakta Wikipediasta
         </h2>
@@ -271,15 +272,18 @@
       menu.inert = true;
       menu.showModal();
       menu.inert = false;
+      if (window.plausible) window.plausible('Open full menu');
     }
   </script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   <script src="menu.js?v2"></script>
   <script src="fact.js"></script>
   <script src="day-counter.js"></script>
   <script src="weekly-events.js?v2"></script>
   <script src="paistopisteporssi.js"></script>
   <script src="nocco-index.js"></script>
-  <script defer data-domain="lukio.raikas.dev" src="https://plausible.mikroni.fi/js/script.js"></script>
+  <script defer data-domain="lukio.raikas.dev"
+    src="https://plausible.mikroni.fi/js/script.tagged-events.outbound-links.js"></script>
 </body>
 
 </html>

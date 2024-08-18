@@ -64,5 +64,31 @@ const OUTPUT_DIR = Bun.env.OUTPUT_DIR ?? './output'
 Bun.write(`${OUTPUT_DIR}/prices.json`, JSON.stringify(finalOutput));
 Bun.write(`${OUTPUT_DIR}/${new Date().toISOString().split("T")[0]}.json`, JSON.stringify(finalOutput));
 
+// Nocco-indeksi (halvin NOCCO)
+
+const firstNocco = (Object.keys(finalOutput.products) as (keyof typeof finalOutput.products)[]).find((i) => i.includes("NOCCO"));
+if (firstNocco) {
+  const noccoStores = finalOutput.products[firstNocco].stores;
+  // Get the cheapest price and the store it's from
+  const cheapestNocco = Object.keys(noccoStores).reduce((cheapest: any, store) => {
+    if (cheapest === null) {
+      return store;
+    }
+    return noccoStores[store].price < noccoStores[cheapest].price ? store : cheapest;
+  }, null);
+
+  Bun.write(`${OUTPUT_DIR}/nocco.json`, JSON.stringify({
+    store: cheapestNocco,
+    price: noccoStores[cheapestNocco].price,
+  }));
+
+  const cheapestHistory = await Bun.file(`${OUTPUT_DIR}/nocco_history.json`).exists() ? JSON.parse(await Bun.file(`${OUTPUT_DIR}/nocco_history.json`).json()) : {};
+  cheapestHistory[new Date().toISOString().split("T")[0]] = {
+    store: cheapestNocco,
+    price: noccoStores[cheapestNocco].price,
+  };
+  Bun.write(`${OUTPUT_DIR}/nocco_history.json`, JSON.stringify(cheapestHistory));
+}
+
 const timeTook = Date.now() - startTime;
 console.log(`Done! Took ${timeTook}ms`);

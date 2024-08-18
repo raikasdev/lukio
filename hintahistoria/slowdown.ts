@@ -1,4 +1,4 @@
-const throttleMs = 1000; // Default throttle time, configurable
+const throttleMs = 100; // Default throttle time, configurable
 const queues = new Map();
 const lastFetchTimes = new Map();
 
@@ -10,7 +10,7 @@ function processQueue(hostname: string) {
   if (!queues.has(hostname)) {
     return;
   }
-  
+
   if (queues.get(hostname).length === 0) {
     queues.delete(hostname);
     return;

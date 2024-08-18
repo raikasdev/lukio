@@ -1,4 +1,7 @@
-export async function getProducts(queryString: string) {
+import { throttledFetch } from "../slowdown";
+
+export async function getProducts(eans: string[], storeId: string) {
+  const products = await Promise.all(eans.map(async (ean) => {
     const apiURL = new URL("https://cfapi.voikukka.fi/graphql");
     const props = new URLSearchParams();
     props.set("operationName", "RemoteFilteredProducts");
@@ -19,27 +22,35 @@ export async function getProducts(queryString: string) {
         includeAgeLimitedByAlcohol: false,
         limit: 100,
         loop54DirectSearch: true,
-        queryString,
+        queryString: ean,
         searchProvider: "loop54",
-        storeId: "660919473",
+        storeId,
         useRandomId: false,
       }),
     );
     apiURL.search = props.toString();
 
-    const res = await fetch(apiURL.toString(), {
-        headers: {
-            'Content-Type': 'application/json',
-            'x-client-name': 'skaupat-web',
-            'x-client-version': 'production-9e13dda19bd01c5864e17d411e8f92f80d8e5c21'
-        }
+    const res = await throttledFetch(apiURL.toString(), {
+      headers: {
+        'Content-Type': 'application/json',
+        'x-client-name': 'skaupat-web',
+        'x-client-version': 'production-9e13dda19bd01c5864e17d411e8f92f80d8e5c21'
+      }
     });
     const { data } = await res.json();
-    const products = data.store.products;
+    if (data.store.products.total === 0) {
+      return null;
+    }
+    const { ean: productEan, price, productDetails } = data.store.products.items[0];
+    return {
+      ean: productEan,
+      image: productDetails.productImages.mainImage.urlTemplate
+        .replace(productDetails.productImages.modifiersString, 'w384_h384_q75')
+        .replace(productDetails.productImages.extensionString, 'jpg'),
+      price,
+      discounts: [],
+    }
+  }));
 
-    console.log(products);
-    Bun.write('./data.json', JSON.stringify(products, null, 2));
+  return products.filter((i) => i !== null);
 }
-  
-
-await getProducts('NOCCO');

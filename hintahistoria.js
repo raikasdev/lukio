@@ -78,3 +78,74 @@
           </dialog>
           `).join("\n");  
 })();
+
+(() => {
+  document.querySelector('.search-box').addEventListener('click', () => {
+    document.querySelector('.search-box input').focus();
+  });
+
+  // Function to perform the search
+  function searchProducts() {
+    const searchQuery = document.querySelector('.search-box input').value.toLowerCase();
+    const products = document.querySelectorAll('.product');
+
+    products.forEach(product => {
+      const productName = product.querySelector('h3').textContent.toLowerCase();
+      const matchType = getMatchType(productName, searchQuery);
+      
+      if (matchType) {
+        product.style.display = 'block';
+        product.dataset.matchType = matchType;
+      } else {
+        product.style.display = 'none';
+        product.dataset.matchType = '';
+      }
+    });
+
+    sortProducts();
+  }
+
+  // Function to determine the match type
+  function getMatchType(productName, query) {
+    if (productName.startsWith(query)) return 'starts';
+    if (productName.includes(query)) return 'includes';
+    if (fuzzyMatch(productName, query)) return 'fuzzy';
+    return null;
+  }
+
+  // Simple fuzzy matching function
+  function fuzzyMatch(str, pattern) {
+    let i = 0, j = 0;
+    while (i < str.length && j < pattern.length) {
+      if (str[i].toLowerCase() === pattern[j].toLowerCase()) j++;
+      i++;
+    }
+    return j === pattern.length;
+  }
+
+  function sortProducts() {
+    const productList = document.querySelector('.product-list');
+    const products = Array.from(productList.querySelectorAll('.product'));
+  
+    products.sort((a, b) => {
+      const order = ['starts', 'includes', 'fuzzy'];
+      const aType = a.dataset.matchType;
+      const bType = b.dataset.matchType;
+  
+      // First, sort by match type
+      if (aType !== bType) {
+        return order.indexOf(aType) - order.indexOf(bType);
+      }
+  
+      // If match types are the same, sort alphabetically
+      const aName = a.querySelector('h3').textContent.toLowerCase();
+      const bName = b.querySelector('h3').textContent.toLowerCase();
+      return aName.localeCompare(bName);
+    });
+  
+    products.forEach(product => productList.appendChild(product));
+  }
+
+  // Add event listener to the search input
+  document.querySelector('.search-box input').addEventListener('input', searchProducts);
+})();

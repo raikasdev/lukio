@@ -486,3 +486,77 @@ h1 {
 #product-prices .button:focus {
   background-color: #2E79C8;
 }
+
+.product-search-box {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #005bbc;
+  color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.product-search-box h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-search-box .search-box {
+  padding: 1rem;
+  border-radius: 16rem;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  color: black;
+  align-items: center;
+}
+
+.search-box:hover {
+  cursor: text;
+}
+
+.product-search-box input[type="text"] {
+  appearance: none;
+  border: 0;
+  font-size: 1rem;
+  width: 100%;
+  padding-left: 1rem;
+  height: 100%;
+}
+
+.search-box:focus-within,
+.search-box:active {
+  outline: 2px solid black;
+}
+.product-search-box input[type="text"]:focus {
+  outline: none;
+}
+
+.product-search-box button {
+  background-color: white;
+  color: #005bbc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: 0;
+  appearance: none;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  margin-top: 1rem;
+  min-width: fit-content;
+  transition: 0.2s ease-in;
+}

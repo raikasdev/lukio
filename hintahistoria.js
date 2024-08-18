@@ -84,7 +84,7 @@
 
 async function openModal(id) {
   document.querySelector(`#dialog-${id}`).showModal();
-  window.plausible('Open product modal: ' + document.querySelector('.product[data-product-id="' + id + '"] h3').textContent);
+  window.plausible('Open product modal', { props: { product: document.querySelector('.product[data-product-id="' + id + '"] h3').textContent }});
   // Load information
   try {
   const res = await fetch(`https://lukio.raikas.dev/hintahistoria/output/products/${id}.json`);

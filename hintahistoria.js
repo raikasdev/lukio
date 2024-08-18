@@ -68,16 +68,76 @@
                 ${i.price} €
               </p>
               <p class="history">${i.cheapestStore}</p>
-              <button class="button" onclick="document.querySelector('#dialog-${simpleHash(i.name)}').showModal()">Lisätietoja</button>
+              <button class="button" onclick="openModal('${simpleHash(i.name)}')">Lisätietoja</button>
             </div>
           </div>
           <dialog id="dialog-${simpleHash(i.name)}">
             <h3>${i.name}</h3>
             <p>${Object.keys(i.stores).sort((a, b) => i.stores[b].price - i.stores[a].price).map((storeName) => `${storeName}: ${i.stores[storeName].price} €`).join("<br>")}</p>
+            <div id="chart-${simpleHash(i.name)}">Ladataan...</div>
             <button class="button" onclick="document.querySelector('#dialog-${simpleHash(i.name)}').close()">Sulje</button>
           </dialog>
           `).join("\n");  
 })();
+
+async function openModal(id) {
+  document.querySelector(`#dialog-${id}`).showModal();
+  // Load information
+  try {
+  const res = await fetch(`https://lukio.raikas.dev/hintahistoria/output/products/${id}.json`);
+  const data = await res.json();
+
+  if (document.querySelector('#chart-js-' + id)) return;
+  document.querySelector('#chart-' + id).innerHTML = `<canvas id="chart-js-${id}"></canvas>`;
+  // chart.js
+  const ctx = document.getElementById(`chart-js-${id}`).getContext('2d');
+  
+  const dates = data.data.map((i) => i.date);
+  // I want one store to be one data set
+  const stores = {};
+  const prices = data.data.map((i) => {
+    const obj = {};
+    Object.keys(i.stores).forEach((store) => {
+      obj[store] = i.stores[store];
+      stores[store] = true;
+    });
+    return obj;
+  });
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: Object.keys(stores).map((store) => {
+        return {
+          label: store,
+          data: prices.map((i) => i[store] ?? null),
+          fill: false,
+          borderColor: '#' + Math.floor(Math.random()*16777215).toString(16),
+          tension: 0.1
+        }
+      })
+    },
+    options: {
+      scales: {
+        x: {
+          type: 'time',
+          time: {
+            unit: 'day'
+          },
+          adapters: {
+            date: {
+              locale: 'fi'
+            }
+          }
+        }
+      }
+    }
+  });
+}catch(e) {
+  document.querySelector('#chart-' + id).innerHTML = 'Hintahistorian haku epäonnistui.';
+}
+}
 
 (() => {
   document.querySelector('.search-box').addEventListener('click', () => {

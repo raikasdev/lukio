@@ -351,7 +351,6 @@ table {
   justify-content: center;
   align-items: stretch;
   gap: 2rem;
-  max-width: 920px;
 }
 
 .product {
@@ -405,6 +404,10 @@ table {
 .products-box .disclaimer {
   margin-bottom: 0;
   margin-top: 1rem;
+}
+
+.products-box {
+  max-width: calc(1024px * 1.5)
 }
 
 .button {

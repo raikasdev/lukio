@@ -82,7 +82,7 @@ if (firstNocco) {
     price: noccoStores[cheapestNocco].price,
   }));
 
-  const cheapestHistory = await Bun.file(`${OUTPUT_DIR}/nocco_history.json`).exists() ? JSON.parse(await Bun.file(`${OUTPUT_DIR}/nocco_history.json`).json()) : {};
+  const cheapestHistory = await Bun.file(`${OUTPUT_DIR}/nocco_history.json`).exists() ? await Bun.file(`${OUTPUT_DIR}/nocco_history.json`).json() : {};
   cheapestHistory[new Date().toISOString().split("T")[0]] = {
     store: cheapestNocco,
     price: noccoStores[cheapestNocco].price,

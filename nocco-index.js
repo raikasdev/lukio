@@ -1,0 +1,1 @@
+document.querySelector('#nocco-index').innerHTML = `<p class="nocco-index">2,69 €</p><p class="nocco-where">Kaupasta S-Market Jämsä</p>`;

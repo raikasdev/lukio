@@ -342,7 +342,8 @@ table {
   }
 }
 
-#lidl-prices {
+#lidl-prices,
+#product-prices {
   line-height: 1.625;
   margin: 0 auto;
   display: flex;
@@ -399,7 +400,9 @@ table {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
-.lidl-box .disclaimer {
+.lidl-box .disclaimer,
+.nocco-box .disclaimer,
+.products-box .disclaimer {
   margin-bottom: 0;
   margin-top: 1rem;
 }
@@ -434,4 +437,52 @@ table {
 h2,
 h1 {
   hyphens: auto;
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  }
+
+.nocco-index {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 900;
+}
+
+.nocco-where {
+  font-weight: 500;
+}
+
+.no-nocco-for-you {
+  font-weight: 700;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.nocco-box .button {
+  margin-top: 1rem;
+}
+
+#product-prices .product img {
+  padding: 1rem;
+}
+#product-prices .product-info {
+  padding: 0;
+  margin: 0.75rem;
+}
+#product-prices .button {
+  background-color: #005bbc;
+  color: white;
+  width: 100%;
+}
+
+#product-prices .button:hover,
+#product-prices .button:focus {
+  background-color: #2E79C8;
 }

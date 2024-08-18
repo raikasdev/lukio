@@ -156,7 +156,7 @@ async function openModal(id) {
       const matchType = getMatchType(productName, searchQuery);
       
       if (matchType) {
-        product.style.display = 'block';
+        product.style.display = 'flex';
         product.dataset.matchType = matchType;
       } else {
         product.style.display = 'none';

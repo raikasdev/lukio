@@ -16,7 +16,7 @@ async function parseEvents(weeklyBulletin: string): Promise<Calendar> {
   Upcoming events should be in an object of the same format but named "upcoming".
   Generic event information like a psychologist being available on x days shouldnt be marked as an event, but added to an "extra"-key to an array where one string is one extra thing.
   You need to work in Finnish.
-  If an even lasts for more than a day (for example exams on a specific week), it shouldn't be noted.`
+  If an even lasts for more than a day (for example exams on a specific week), it shouldn't be noted. Do not include "ylioppilaskirjoitukset" in the upcoming section.`
   
   
   const response = await client.chat.completions.create({

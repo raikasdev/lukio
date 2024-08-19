@@ -26,8 +26,9 @@ const res = await fetch(`https://api.tankille.fi/stations?location=${encodeURICo
     'User-Agent': 'FuelFellow/3.7.1 (SM-G988N; Android 7.1.2)'
   }
 });
-const stations = (await res.json()).map(({ location, address, name, price }) => {
-  const prices = Object.fromEntries(price.map(({ tag, price }) => [tag, price]));
+const raw = (await res.json());
+const stations = raw.map(({ location, address, name, price }) => {
+  const prices = Object.fromEntries(price.map(({ tag, price }) => [(tag === 'dsl+' ? 'dsl' : tag), price]));
 
   return {
     name,
@@ -61,7 +62,7 @@ function findCheapestStations(stations) {
               price: station.prices[fuelType]
           }));
       } else {
-          results[fuelType] = [];
+        results[fuelType] = [];
       }
   });
 

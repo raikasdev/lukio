@@ -62,19 +62,10 @@ function formatDate(date) {
   return `${year}${month.toString().padStart(2, "0")}${day.toString().padStart(2, "0")}`;
 }
 
+// Generate a function that gets the specified week day (0 = Sunday, 1 = Monday, ..., 6 = Saturday) from a date
 function getWeekDayGetter(day) {
   const result = new Date();
-  const currentDay = result.getDay();
-  const daysToAdd = (day - currentDay + 7) % 7;
-  
-  // If it's Saturday or Sunday, and we're looking for Saturday or Sunday,
-  // add an extra week
-  if ((currentDay === 0 || currentDay === 6) && (day === 0 || day === 6)) {
-    result.setDate(result.getDate() + daysToAdd + 7);
-  } else {
-    result.setDate(result.getDate() + daysToAdd);
-  }
-  
+  result.setDate(result.getDate() + day - result.getDay());
   return result;
 }
 

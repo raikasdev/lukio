@@ -35,7 +35,7 @@ function processData(data, lastUpdated) {
             { weekday: 'short', day: 'numeric', month: 'numeric', year: 'numeric'}
           )
         ),
-        events: data.events[date].join("<br/>")
+        events: data.events[date].map((i) => i.replaceAll('\n', '<br>')).join("<br/>")
       }))
       .sort((a, b) => a.date - b.date)
       .filter((i) => i.events !== "");

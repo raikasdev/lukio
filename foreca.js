@@ -1,0 +1,1 @@
+document.querySelector('#foreca-link').href = `https://www.foreca.fi/Finland/Jamsa/details/${new Date().toISOString().slice(0,10).replace(/-/g,"")}#hourly`;

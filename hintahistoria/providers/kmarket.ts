@@ -28,7 +28,7 @@ export async function getProducts(allEans: string[], storeId: string) {
     const data = await res.json();
     products = products.concat(data.data.getProducts);
   }
-  
+
   return products.map((i: any) => {
     const discounts = [];
     if (i.isAvailable === false) return null;
@@ -42,7 +42,7 @@ export async function getProducts(allEans: string[], storeId: string) {
       discounts.push({
         type: 'kplussa_batch',
         batch: i.pricing.batch.amount,
-        price: i.pricing.batch.price,
+        price: Math.round(100 * (i.pricing.batch.price / i.pricing.batch.amount)) / 100,
       });
     }
 

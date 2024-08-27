@@ -1,6 +1,6 @@
 const loadAll = window.LOAD_ALL_PRODUCTS || false;
 const featuredProducts = [ // On the front page
-  "Juusto-pekonisämpylä",
+  "Voicroissant 24 %",
   "Kinkku-juustocroissant",
   "Valkosipulivoipatonki",
 ];
@@ -91,8 +91,9 @@ async function processPorssiData(data, prices) {
   container.innerHTML = products
     .sort((a, b) => order[a.direction] - order[b.direction])
     .map(({ name, text, direction }) => {
-    const image = prices.find((p) => p.fullTitle === name).image;
-    const price = prices.find((p) => p.fullTitle === name).price;
+    const image = prices.find((p) => p.fullTitle === name)?.image;
+    const price = prices.find((p) => p.fullTitle === name)?.price;
+    if (!image || !price) return null;
     const icon =
       direction === "up"
         ? `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -122,7 +123,7 @@ async function processPorssiData(data, prices) {
               </p>
             </div>
           </div>`;
-  }).join("\n");
+  }).filter((i) => !!i).join("\n");
   document.querySelector('#lidl-last-updated').innerHTML = new Date(lastUpdated).toLocaleDateString('fi');
 }
 

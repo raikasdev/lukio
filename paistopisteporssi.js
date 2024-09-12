@@ -1,6 +1,6 @@
 const loadAll = window.LOAD_ALL_PRODUCTS || false;
 const featuredProducts = [ // On the front page
-  "Voicroissant 24 %",
+  "Liepuskan Flatbread Kebab",
   "Kinkku-juustocroissant",
   "Valkosipulivoipatonki",
 ];

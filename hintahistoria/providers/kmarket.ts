@@ -25,6 +25,11 @@ export async function getProducts(allEans: string[], storeId: string) {
       })
     });
 
+    if (res.status !== 200) {
+      console.log("Fetching K market failed", res.status);
+      console.log("Body", await res.text())
+      continue;
+    }
     const data = await res.json();
     products = products.concat(data.data.getProducts);
   }

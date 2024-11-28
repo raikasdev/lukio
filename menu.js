@@ -20,11 +20,10 @@ async function getMenu() {
       document.querySelector('#full-menu').innerHTML = data.normal.weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
       document.querySelector('#vege-menu-items').innerHTML = data.vegetarian.today;
       document.querySelector('#full-vege-menu').innerHTML = data.vegetarian.weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
-      return;
     }
   }
 
-  const url = `https://fi.jamix.cloud/apps/menuservice/rest/haku/menu/${CUSTOMER_ID}/${KITCHEN_ID}?lang=fi&date=${formatDate(startDate)}&date2=${formatDate(endDate)}`;
+  const url = 'https://lukio.raikas.dev/api/menu.php'; //`https://fi.jamix.cloud/apps/menuservice/rest/haku/menu/${CUSTOMER_ID}/${KITCHEN_ID}?lang=fi&date=${formatDate(startDate)}&date2=${formatDate(endDate)}`;
   try {
   const res = await fetch(url);
   const [{ menuTypes }] = await res.json();

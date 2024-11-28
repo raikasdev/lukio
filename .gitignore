@@ -3,3 +3,4 @@ paistopiste/output/*.csv
 paistopiste/output/*.json
 vendor
 events.json
+menu_cache.json

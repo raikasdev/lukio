@@ -15,7 +15,7 @@ async function parseEvents(weeklyBulletin: string): Promise<Calendar> {
   Only events happening during the current/next week should be in this array.
   Upcoming events should be in an object of the same format but named "upcoming".
   Generic event information like a psychologist being available on x days shouldnt be marked as an event, but added to an "extra"-key to an array where one string is one extra thing.
-  You need to work in Finnish.
+  You need to work in Finnish. The current year is ${new Date().getFullYear()}.
   If an event lasts for more than a day (for example exams on a specific week), it shouldn't be noted. Do not include "ylioppilaskirjoitukset" in the upcoming section.
   
   If something is marked as happening on "odd weeks" or "even weeks", if the current week is odd/even like the event something like "(tällä viikolla)" should be added the declaration of odd/even weeks, otherwise "(ensi viikolla)". Example: "X on tavattavissa parittomilla viikoilla (tällä viikolla)" or "X on tavattavissa parillisilla viikoilla (ensi viikolla)". Keep a neutral tone.

@@ -229,6 +229,12 @@ h1 {
   padding: 2.5rem 4rem;
 }
 
+#kalkki-dialog {
+  max-width: 640px;
+  max-height: calc(95vh - 2.5rem * 2);
+  padding: 2.5rem 4rem;
+}
+
 #time-dialog {
   overflow-x: hidden;
 }

@@ -1,12 +1,15 @@
 
 const outputDir = process.env.OUTPUT_DIR ?? './output';
 
-async function loadData(date, data = {}) {
+async function loadData(date, data = {}, tries = 0) {
   const currentDate = date.toISOString().split('T')[0];
   const file = Bun.file(`${outputDir}/${currentDate}.json`);
 
   if (!(await file.exists())) {
     console.log(`Data for ${currentDate} not found.`);
+    if (tries < 3) {
+      return await loadData(new Date(date.getTime() - 24 * 60 * 60 * 1000), data, tries + 1);
+    }
     return data;
   }
 

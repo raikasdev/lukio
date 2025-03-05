@@ -4,3 +4,4 @@ paistopiste/output/*.json
 vendor
 events.json
 menu_cache.json
+dist

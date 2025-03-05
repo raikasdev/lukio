@@ -27,17 +27,26 @@ async function getMenu() {
   try {
   const res = await fetch(url);
   const [{ menuTypes }] = await res.json();
-  const { menus } = menuTypes.find((menu) => menu.menuTypeName === "Koulut");
+  const menuType = menuTypes.find((menu) => menu.menuTypeName === "Koulut");
+  if (!menuType) {
+    document.querySelector('#menu-items').innerHTML = 'Jamixista ei löydy koulujen ruokalistaa. Joko nyt on loma tai Jamix on muokannut sivujansa niin ettei upea koodini löydä oikeaa ruokalistaa.';
+    document.querySelector('#full-menu').innerHTML = 'Jamixista ei löydy koulujen ruokalistaa. Joko nyt on loma tai Jamix on muokannut sivujansa niin ettei upea koodini löydä oikeaa ruokalistaa.';
+    document.querySelector('#vege-menu-items').innerHTML = 'Jamixista ei löydy koulujen ruokalistaa. Joko nyt on loma tai Jamix on muokannut sivujansa niin ettei upea koodini löydä oikeaa ruokalistaa.';
+    document.querySelector('#full-vege-menu').innerHTML = 'Jamixista ei löydy koulujen ruokalistaa. Joko nyt on loma tai Jamix on muokannut sivujansa niin ettei upea koodini löydä oikeaa ruokalistaa.';
+    return;
+  }
+  const menus = menuType.menus;
   const normalMenu = menus.find((menu) => menu.menuId === NORMAL_MENU);
   const vegetarianMenu = menus.find((menu) => menu.menuId === VEGETARIAN_MENU);
 
   document.querySelector('#menu-items').innerHTML = parseMenu(normalMenu).today;
-  document.querySelector('#full-menu').innerHTML = parseMenu(normalMenu).weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
+  document.querySelector('#full-menu').innerHTML = parseMenu(normalMenu).weekMenu.map((i, index) => `${(i.dateString.startsWith("Maanantai") && index !== 0) ? '<br><h3>Ensi viikko</h3>' : ''}<h4>${i.dateString}</h4>${i.menu}`).join("\n");
   document.querySelector('#vege-menu-items').innerHTML = parseMenu(vegetarianMenu).today;
-  document.querySelector('#full-vege-menu').innerHTML = parseMenu(vegetarianMenu).weekMenu.map((i) => `<h4>${i.dateString}</h4>${i.menu}`).join("\n");
+  document.querySelector('#full-vege-menu').innerHTML = parseMenu(vegetarianMenu).weekMenu.map((i, index) => `${(i.dateString.startsWith("Maanantai") && index !== 0) ? '<br><h3>Ensi viikko</h3>' : ''}<h4>${i.dateString}</h4>${i.menu}`).join("\n");
 
   localStorage.setItem('menu-cache', JSON.stringify({ date: formatDate(new Date()), data: { normal: parseMenu(normalMenu), vegetarian: parseMenu(vegetarianMenu) } }));
   } catch (e) {
+    console.log(e);
     document.querySelector('#menu-items').innerHTML = 'Ruokalistan haku epäonnistui. Jamix-tietopalvelu taitaa olla alhaalla. Yritä hetken päästä uudelleen :)';
     document.querySelector('#full-menu').innerHTML = 'Ruokalistan haku epäonnistui. Jamix-tietopalvelu taitaa olla alhaalla. Yritä hetken päästä uudelleen :)';
     document.querySelector('#vege-menu-items').innerHTML = 'Ruokalistan haku epäonnistui. Jamix-tietopalvelu taitaa olla alhaalla. Yritä hetken päästä uudelleen :)';

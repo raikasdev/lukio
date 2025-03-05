@@ -13,7 +13,7 @@ function getMondayFriday() {
     }
     
     $friday = clone $monday;
-    $friday->modify('+4 days');
+    $friday->modify('+11 days');
     
     return [
         $monday->format('Ymd'),

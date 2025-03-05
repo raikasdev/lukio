@@ -235,6 +235,10 @@ h1 {
   padding: 2.5rem 4rem;
 }
 
+#kalkki-dialog a {
+  color: #005bbc;
+}
+
 #time-dialog {
   overflow-x: hidden;
 }

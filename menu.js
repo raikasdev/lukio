@@ -4,8 +4,8 @@
 // Config
 const CUSTOMER_ID = 96665;
 const KITCHEN_ID = 4;
-const NORMAL_MENU = 365;
-const VEGETARIAN_MENU = 366;
+const NORMAL_MENU = 375;
+const VEGETARIAN_MENU = 374;
 
 // The magic
 async function getMenu() {

@@ -40,7 +40,7 @@ async function parseEvents(weeklyBulletin: string): Promise<Calendar> {
       { role: 'system', content: SYSTEM_MESSAGE },
       { role: 'user', content: weeklyBulletin },
     ],
-    model: 'gpt-4o',
+    model: 'gpt-4.1',
     response_format: { type: 'json_object' },
   });
   

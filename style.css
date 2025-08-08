@@ -291,10 +291,10 @@ h1 {
   overflow-x: hidden;
 }
 
-#kalkki-button.unseen {
+/*#kalkki-button.unseen {
   background-color: #1d2d35;
   color: #B2DC5B;
-}
+}*/
 
 #menu-dialog .menu-type-grid:not(.buttons) {
   gap: 5rem;

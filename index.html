@@ -6,7 +6,7 @@
   <title>Opiskelijan työkalupakki Jämsän lukioon</title>
   <meta name="description" content="Koontisivu hyödyllisistä työkaluista Jämsän lukion opiskelijoille.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css?v8">
+  <link rel="stylesheet" href="style.css?v10">
 </head>
 
 <body>
@@ -132,9 +132,8 @@
               viikon ruokalista</button>
         </div>
         <dialog id="time-dialog">
-          <h2>Ruokailuaikataulu (periodi 3)</h2>
-          <h3><strong>Abit</strong> klo 10.45</h3>
-          <h3><strong>Kakkoset</strong> klo 11.00</h3>
+          <h2>Ruokailuaikataulu (periodi 5)</h2>
+          <h3><strong>Kakkoset</strong> klo 10.45</h3>
           <h3>Ykköset</h3>
           <table>
             <tr>
@@ -145,33 +144,33 @@
             </tr>
             <tr>
               <td>Maanantai (45min)</td>
-              <td>RUA02.1</td>
-              <td>RUB12.2</td>
-              <td>MAA02.2+03.2</td>
+              <td>MAB03.1</td>
+              <td>BI02+BI3.2</td>
+              <td>MAA04.2</td>
             </tr>
             <tr>
               <td>Tiistai (45min)</td>
-              <td>SAB21.1</td>
-              <td>HI01.3</td>
-              <td>PS01.3</td>
+              <td>RAB34.1</td>
+              <td>MAA04.1</td>
+              <td>ENA03.3</td>
             </tr>
             <tr>
               <td>Keskiviikko (30min)</td>
-              <td>FY01+02.3</td>
-              <td>GE01.2</td>
-              <td>LI07.1</td>
+              <td>ÄI04.1</td>
+              <td>BI02+BI3</td>
+              <td>TE04.1</td>
             </tr>
             <tr>
               <td>Torstai (45min)</td>
-              <td>RAB32.1</td>
-              <td>RUB11+12.3</td>
-              <td></td>
+              <td>BI2+BI3.3</td>
+              <td>FY04.1</td>
+              <td>FI01.3</td>
             </tr>
             <tr>
               <td>Perjantai (45min)</td>
-              <td>RUB12.2</td>
-              <td>MAA02+03.1</td>
-              <td>GE01.1</td>
+              <td>RUA03.1</td>
+              <td>ÄI04.3</td>
+              <td>PS02.2</td>
             </tr>
           </table>
           <div class="menu-type-grid buttons full">
@@ -308,6 +307,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () =>{
       if (localStorage.getItem('kalkki-dialog-shown') === 'true') return;
+      if (localStorage.getItem('kalkki-dialog-no-color') === 'true') return;
       document.querySelector('#kalkki-button').classList.add('unseen');
     })
     document.querySelector('#kalkki-button').addEventListener('click', showKalkkiDialog)
@@ -333,7 +333,7 @@
     }
     function closeKalkkiDialog() {
       document.querySelector('#kalkki-dialog').close();
-      localStorage.setItem('kalkki-dialog-shown', 'true');
+      localStorage.setItem('kalkki-dialog-no-color', 'true');
       window.plausible('kalkki-dont-care')
     }
     dB.addEventListener('click', clickListener);

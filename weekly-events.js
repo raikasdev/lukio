@@ -12,7 +12,7 @@ async function getEvents() {
     }
     const res = await fetch('https://lukio.raikas.dev/tiedotteet/events.json');
     const data = await res.json();
-    const lastUpdated = new Date(res.headers.get('Date')).toLocaleString('fi');
+    const lastUpdated = new Date(res.headers.get('last-modified')).toLocaleString('fi');
     if (cacheDate && lastUpdated === cacheDate) {
       return;
     }

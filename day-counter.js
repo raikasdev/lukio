@@ -1,101 +1,100 @@
 // This might be bad as it's written by Claude :)
 
 const config = {
-  "totalWorkDays": 187,
+  "totalWorkDays": 188,
   "autumnSemester": {
-    "start": "2024-08-07",
-    "end": "2024-12-20",
+    "start": "2025-08-06",
+    "end": "2025-12-19",
     "breaks": [
       {
         "name": "Syysloma (vko 42)",
-        "start": "2024-10-14",
-        "end": "2024-10-20"
+        "start": "2025-10-13",
+        "end": "2025-10-19"
       },
       {
         "name": "Itsenäisyyspäivä",
-        "date": "2024-12-06"
+        "date": "2025-12-06"
       }
     ]
   },
   "christmasBreak": {
-    "start": "2024-12-21",
-    "end": "2025-01-06"
+    "start": "2025-12-20",
+    "end": "2026-01-06"
   },
   "springSemester": {
-    "start": "2025-01-07",
-    "end": "2025-05-31",
+    "start": "2026-01-07",
+    "end": "2026-05-31",
     "breaks": [
       {
         "name": "Talviloma (vko 9)",
-        "start": "2025-02-24",
-        "end": "2025-03-02"
+        "start": "2026-02-23",
+        "end": "2026-03-01"
       },
       {
         "name": "Pääsiäinen",
-        "start": "2025-04-18",
-        "end": "2025-04-21"
+        "start": "2026-04-03",
+        "end": "2026-04-06"
       },
       {
         "name": "Vappuvapaa",
-        "start": "2025-05-01",
-        "end": "2025-05-02"
+        "date": "2026-05-01"
       },
       {
         "name": "Helatorstai",
-        "date": "2025-05-29"
+        "date": "2026-05-14"
       }
     ]
   },
-  "abiturientsFinalDay": "2025-02-06",
+  "abiturientsFinalDay": "2025-02-03",
   "periods": [
     {
       "number": 1,
-      "start": "2024-08-07",
-      "end": "2024-09-26",
-      "days": 37,
+      "start": "2025-08-06",
+      "end": "2025-09-26",
+      "days": 38,
       "finalWeek": {
-        "start": "2024-09-19",
-        "end": "2024-09-26"
+        "start": "2025-09-19",
+        "end": "2025-09-26"
       }
     },
     {
       "number": 2,
-      "start": "2024-09-27",
-      "end": "2024-11-21",
+      "start": "2025-09-29",
+      "end": "2025-11-21",
       "days": 35,
       "finalWeek": {
-        "start": "2024-11-14",
-        "end": "2024-11-21"
+        "start": "2025-11-14",
+        "end": "2025-11-21"
       }
     },
     {
       "number": 3,
-      "start": "2024-11-22",
-      "end": "2025-01-30",
+      "start": "2025-11-24",
+      "end": "2026-01-30",
       "days": 38,
       "finalWeek": {
-        "start": "2025-01-23",
-        "end": "2025-01-30"
+        "start": "2026-01-23",
+        "end": "2026-01-30"
       }
     },
     {
       "number": 4,
-      "start": "2025-01-31",
-      "end": "2025-03-31",
+      "start": "2026-02-02",
+      "end": "2026-03-31",
       "days": 37,
       "finalWeek": {
-        "start": "2025-03-24",
-        "end": "2025-03-31"
+        "start": "2026-03-24",
+        "end": "2026-03-31"
       }
     },
     {
       "number": 5,
-      "start": "2025-04-01",
-      "end": "2025-05-31",
-      "days": 39,
+      "start": "2026-04-01",
+      "end": "2026-05-31",
+      "days": 40,
       "finalWeek": {
-        "start": "2025-05-21",
-        "end": "2025-05-28"
+        "start": "2026-05-21",
+        "end": "2026-05-28"
       }
     }
   ]
@@ -164,7 +163,7 @@ function generateOutput(currentDate) {
       const schoolDaysUntilBreak = Math.round(daysUntilBreak * 5 / 7); // Approximation
       output += `Seuraava loma on ${nextBreak.name}, johon on ${daysUntilBreak} päivä${daysUntilBreak !== 1 ? 'ä' : ''} (~${schoolDaysUntilBreak} koulupäivä${schoolDaysUntilBreak !== 1 ? 'ä' : ''}). `;
   } else {
-    output += "Nyt on lomat lusittu. ";
+    output += "Se olis kesäloma. Tai sitten en ole päivittänyt lomia sisään. ";
   }
 
   output += "</p><p>"

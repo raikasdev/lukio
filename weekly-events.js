@@ -10,7 +10,7 @@ async function getEvents() {
       cacheDate = date;
       processData(cacheData, date);
     }
-    const res = await fetch('https://lukio.raikas.dev/tiedotteet/events.json');
+    const res = await fetch('https://jamsanlukio.fi/tiedotteet/events.json');
     const data = await res.json();
     const lastUpdated = new Date(res.headers.get('last-modified')).toLocaleString('fi');
     if (cacheDate && lastUpdated === cacheDate) {

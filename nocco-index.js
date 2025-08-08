@@ -33,7 +33,7 @@
   }
 
 (async () => {
-  const res = await loadCachedAPI('https://lukio.raikas.dev/hintahistoria/output/nocco.json');
+  const res = await loadCachedAPI('https://jamsanlukio.fi/hintahistoria/output/nocco.json');
 
   document.querySelector('#nocco-index').innerHTML = `<p class="nocco-index">${res.price.toString().replace('.', ',')} €</p><p class="nocco-where">Kaupasta ${res.store}</p>`;
 })();

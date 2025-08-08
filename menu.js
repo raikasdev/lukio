@@ -23,7 +23,7 @@ async function getMenu() {
     }
   }
 
-  const url = 'https://lukio.raikas.dev/api/menu.php'; //`https://fi.jamix.cloud/apps/menuservice/rest/haku/menu/${CUSTOMER_ID}/${KITCHEN_ID}?lang=fi&date=${formatDate(startDate)}&date2=${formatDate(endDate)}`;
+  const url = 'https://jamsanlukio.fi/api/menu.php'; //`https://fi.jamix.cloud/apps/menuservice/rest/haku/menu/${CUSTOMER_ID}/${KITCHEN_ID}?lang=fi&date=${formatDate(startDate)}&date2=${formatDate(endDate)}`;
   try {
   const res = await fetch(url);
   const [{ menuTypes }] = await res.json();

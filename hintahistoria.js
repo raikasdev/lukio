@@ -33,7 +33,7 @@
   
     return data;
   }
-  const data = await loadCachedAPI('https://lukio.raikas.dev/hintahistoria/output/prices.json');
+  const data = await loadCachedAPI('https://jamsanlukio.fi/hintahistoria/output/prices.json');
   const products = Object.keys(data.products).map((i) => {
     // stores: { "S-Market Jämsä": { price: 1.99 }, "K-Market Jämsä": {price: 2.49 } }
     // Get the cheapest price and store it's in
@@ -87,7 +87,7 @@ async function openModal(id) {
   window.plausible('Open product modal', { props: { product: document.querySelector('.product[data-product-id="' + id + '"] h3').textContent }});
   // Load information
   try {
-  const res = await fetch(`https://lukio.raikas.dev/hintahistoria/output/products/${id}.json`);
+  const res = await fetch(`https://jamsanlukio.fi/hintahistoria/output/products/${id}.json`);
   const data = await res.json();
 
   if (document.querySelector('#chart-js-' + id)) return;
